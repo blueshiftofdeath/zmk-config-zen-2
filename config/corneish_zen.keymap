@@ -44,9 +44,9 @@
 //                    | FUN | ENT | TAB |   | ENT | SPC  | ALT |
                         bindings = <
    &kp TAB   &kp SEMI       &kp COMMA   &kp DOT &kp P        &kp Y          &kp F &kp G        &kp C &kp R &kp L &kp BSPC
-   &kp ESC   &bhm LCTRL A   &bhm LALT O &kp E   &bhm LSHFT U &kp I          &kp D &bhm RSHFT H &kp T &kp N &kp S &kp MINUS
+   &kp ESC   &bhm LCTRL A   &bhm LALT O &lt 3 E &bhm LSHFT U &kp I          &kp D &bhm RSHFT H &kp T &kp N &kp S &kp MINUS
    &kp LSHFT &bhm LCTRL SQT &kp Q       &kp J   &kp K        &kp X          &kp B &kp M        &kp W &kp V &kp Z &kp LCTRL
-                                        &mo 3   &lt 1 RET    &mt LGUI TAB   &kp RET &lt 2 SPACE &kp RALT
+                                        &mo 4   &lt 1 RET    &mt LGUI TAB   &kp RET &lt 2 SPACE &kp RALT
                         >;
                 };
 
@@ -77,6 +77,21 @@
    &bt BT_CLR &kp N7  &kp N5  &kp N3  &kp N1 &kp N9         &kp N8  &kp N0  &kp N2 &kp N4  &kp N6 &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                        >;
+                };
+
+                fun_layer {
+                        label = "NAV";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  | LFT | RGT |  9  |  0  | BKSP |
+// | BTCLR| CTL | ALT |     | SFT |     |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT | BT3 | BT2 | BT1 |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &kp TAB    &trans    &trans   &trans   &trans    &trans      &kp N6   &kp LEFT &kp RIGHT &kp N9    &kp N0 &kp BSPC
+   &bt BT_CLR &kp LCTRL &kp LALT &trans   &kp LSHFT &trans      &kp LEFT &kp DOWN &kp UP    &kp RIGHT &trans &trans
+   &kp LSHFT  &kp LCTRL &trans   &trans   &trans    &trans      &trans   &trans   &trans    &trans    &trans &trans
+                          	     &kp LGUI &trans    &kp LGUI    &kp RET  &trans   &kp RALT
                         >;
                 };
 
