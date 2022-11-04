@@ -41,12 +41,12 @@
 // |  TAB |  ;  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  | BKSP |
 // | ESC  |  A  |  O  |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  -   |
 // | SHFT |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | CTRL |
-//                    | FUN | LWR | SPC |   | ENT | SPC  | ALT |
+//                    | FUN | ENT | TAB |   | ENT | SPC  | ALT |
                         bindings = <
-   &kp TAB   &kp SEMI       &kp COMMA &kp DOT &kp P        &kp Y   &kp F &kp G        &kp C &kp R &kp L &kp BSPC
-   &kp ESC   &bhm LCTRL A   &kp O     &kp E   &bhm LSHFT U &kp I   &kp D &bhm RSHFT H &kp T &kp N &kp S &kp MINUS
-   &kp LSHFT &bhm LCTRL SQT &kp Q     &kp J   &kp K        &kp X   &kp B &kp M        &kp W &kp V &kp Z &kp LCTRL
-                  &mo 3 &mo 1 &kp SPACE   &kp RET &lt 2 SPACE &kp RALT
+   &kp TAB   &kp SEMI       &kp COMMA &kp DOT &kp P        &kp Y          &kp F &kp G        &kp C &kp R &kp L &kp BSPC
+   &kp ESC   &bhm LCTRL A   &kp O     &kp E   &bhm LSHFT U &kp I          &kp D &bhm RSHFT H &kp T &kp N &kp S &kp MINUS
+   &kp LSHFT &bhm LCTRL SQT &kp Q     &kp J   &kp K        &kp X          &kp B &kp M        &kp W &kp V &kp Z &kp LCTRL
+                                      &mo 3   &lt 1 RET    &mt LGUI TAB   &kp RET &lt 2 SPACE &kp RALT
                         >;
                 };
 
@@ -81,7 +81,7 @@
                 };
 
                 fun_layer {
-                        label = "FUN";
+                        label = "FUNC";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT3 | BT2 | BT1 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
