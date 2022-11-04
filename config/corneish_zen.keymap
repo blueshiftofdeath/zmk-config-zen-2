@@ -43,10 +43,10 @@
 // | CAPS |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | CTRL |
 //                    | FUN | ENT | TAB |   | TAB | SPC  | ALT |
                         bindings = <
-   &kp TAB   &kp SEMI      &kp COMMA   &kp DOT &kp P        &kp Y          &kp F &kp G        &kp C &kp R &kp L &kp BSPC
-   &kp ESC   &bhm LCTRL A  &bhm LALT O &lt 3 E &bhm LSHFT U &kp I          &kp D &bhm RSHFT H &kp T &kp N &kp S &kp MINUS
-   &kp CAPS  &bhm LALT SQT &kp Q       &kp J   &kp K        &kp X          &kp B &kp M        &kp W &kp V &kp Z &kp LCTRL
-                                       &mo 4   &lt 1 RET    &mt LGUI TAB   &kp TAB &lt 2 SPACE &kp RALT
+   &kp TAB   &kp SEMI     &kp COMMA  &kp DOT &kp P       &kp Y          &kp F   &kp G       &kp C    &kp R &kp L &kp BSPC
+   &kp ESC   &hm LCTRL A  &hm LALT O &lt 3 E &hm LSHFT U &kp I          &kp D   &hm RSHFT H &kp T    &kp N &kp S &kp MINUS
+   &kp CAPS  &hm LALT SQT &kp Q      &kp J   &kp K       &kp X          &kp B   &kp M       &kp W    &kp V &kp Z &kp LCTRL
+                                       &mo 4   &lt 1 RET   &mt LGUI TAB   &kp TAB &lt 2 SPACE &kp RALT
                         >;
                 };
 
@@ -58,9 +58,9 @@
 // | SHFT |  "  | DEL | BKSP | BKSP |     |   |  _  |  @  |  ^  |  }  | "|" |  ~   |
 //                    | GUI  |      | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &kp AMPS        &kp QMARK       &kp EXCL  &kp DLLR       &kp PRCNT   &kp GRAVE &kp HASH  &kp KP_MULTIPLY &kp FSLH &kp BSLH &kp BSPC
-   &kp LCTRL &bhm LCTRL LBRC &bhm LALT LBKT  &kp COLON &hm LSHFT LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS        &kp RBKT &kp RBRC &kp MINUS
-   &kp LSHFT &bhm LALT DQT   &kp DELETE      &kp BSPC  &kp BSPC       &trans      &kp UNDER &kp AT    &kp CARET       &kp RBRC &kp PIPE &kp TILDE
+   &kp  TAB  &kp AMPS       &kp QMARK      &kp EXCL  &kp DLLR       &kp PRCNT   &kp GRAVE &kp HASH  &kp KP_MULTIPLY &kp FSLH &kp BSLH &kp BSPC
+   &kp LCTRL &hm LCTRL LBRC &hm LALT LBKT  &kp COLON &hm LSHFT LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS        &kp RBKT &kp RBRC &kp MINUS
+   &kp LSHFT &hm LALT DQT   &kp DELETE     &kp BSPC  &kp BSPC       &trans      &kp UNDER &kp AT    &kp CARET       &kp RBRC &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
