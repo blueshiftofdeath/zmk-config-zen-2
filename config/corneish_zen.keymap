@@ -49,12 +49,12 @@
                 default_layer {
                         label = "DVORAK";
 // -----------------------------------------------------------------------------------------
-// | STNO |  ;  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  | SHFT |
+// |      |  ;  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  | SHFT |
 // | ESC  |  A  |  O  |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  -   |
 // | CAPS |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | SHFT*|
 //                    | FUN | ENT | TAB |   | TAB | SPC  | ALT |
                         bindings = <
-   &to STENO &kp SEMI     &kp COMMA  &kp DOT &kp P       &kp Y          &kp F   &kp G &kp C &kp R &kp L &kp LSHIFT
+   &trans    &kp SEMI     &kp COMMA  &kp DOT &kp P       &kp Y          &kp F   &kp G &kp C &kp R &kp L &kp LSHIFT
    &kp ESC   &hm LCTRL A  &hm LALT O &lt 3 E &hm LSHFT U &kp I          &kp D   &hm LSHFT H &kp T    &kp N &kp S &kp MINUS
    &kp CAPS  &hm LALT SQT &kp Q      &kp J   &kp K       &kp X          &kp B   &kp M       &kp W    &kp V &kp Z &sk LSHIFT
                                        &mo 4   &lt 1 RET   &mt LGUI TAB   &kp TAB &lt 2 SPACE &kp RALT
@@ -64,12 +64,12 @@
                 raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// | BASE |  &  |  ?  |  !   |  $   |  %  |   |  `  |  #  |  *  |  /  |  \  | BKSP |
+// | STNO |  &  |  ?  |  !   |  $   |  %  |   |  `  |  #  |  *  |  /  |  \  | BKSP |
 // | CTRL |  {  |  [  |  :   |  (   |  =  |   |  ~  |  )  |  +  |  ]  |  }  |  -   |
 // | SHFT |  "  | DEL | BKSP | BKSP |     |   |  _  |  @  |  ^  |  _  | "|" |  ~   |
 //                    | GUI  |      | SPC |   | ENT |     | ALT |
                         bindings = <
-   &to DEFAULT &kp AMPS       &kp QMARK      &kp EXCL  &kp DLLR       &kp PRCNT   &kp GRAVE &kp HASH  &kp KP_MULTIPLY &kp FSLH  &kp BSLH &kp BSPC
+   &to STENO   &kp AMPS       &kp QMARK      &kp EXCL  &kp DLLR       &kp PRCNT   &kp GRAVE &kp HASH  &kp KP_MULTIPLY &kp FSLH  &kp BSLH &kp BSPC
    &kp LCTRL   &hm LCTRL LBRC &hm LALT LBKT  &kp COLON &hm LSHFT LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS        &kp RBKT  &kp RBRC &kp MINUS
    &kp LSHFT   &hm LALT DQT   &kp DELETE     &kp BSPC  &kp BSPC       &trans      &kp UNDER &kp AT    &kp CARET       &kp UNDER &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
@@ -125,13 +125,13 @@
                         label = "STENO";
 // -----------------------------------------------------------------------------------------
 // | BASE |  1  |  2  |  3  |  4  |  5  |   |  6  | LFT | RGT |  9  |  0  | BKSP |
-// | BTCLR|  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  [   |
-// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
+// |  T   |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  [   |
+// |  G   |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
 //                    |     |  C  |  V  |   |  N  |  M  |     |
                         bindings = <
    &to DEFAULT &trans &trans  &trans  &trans &trans     &kp N6  &trans &trans &trans &trans   &kp BSPC
-   &bt BT_CLR  &kp Q  &kp W   &kp E   &kp R  &kp T      &kp Y   &kp U  &kp I  &kp O  &kp P    &kp LBRC
-   &kp LSHFT   &kp A  &kp S   &kp D   &kp F  &kp G      &kp H   &kp J  &kp K  &kp L  &kp SEMI &kp SQT
+   &bt T       &kp Q  &kp W   &kp E   &kp R  &kp T      &kp Y   &kp U  &kp I  &kp O  &kp P    &kp LBRC
+   &kp G       &kp A  &kp S   &kp D   &kp F  &kp G      &kp H   &kp J  &kp K  &kp L  &kp SEMI &kp SQT
                           	  &trans  &kp C  &kp V      &kp N   &kp M  &trans
                         >;
                 };
