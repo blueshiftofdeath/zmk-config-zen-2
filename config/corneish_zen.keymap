@@ -2,6 +2,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define SYM     1
+#define NUM     2
+#define NAV     3
+#define FUN     4
+#define STENO   5
+
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
@@ -42,12 +49,12 @@
                 default_layer {
                         label = "DVORAK";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  ;  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  | SHFT |
+// | STNO |  ;  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  | SHFT |
 // | ESC  |  A  |  O  |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  -   |
 // | CAPS |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | SHFT*|
 //                    | FUN | ENT | TAB |   | TAB | SPC  | ALT |
                         bindings = <
-   &kp TAB   &kp SEMI     &kp COMMA  &kp DOT &kp P &kp Y          &kp F   &kp G &kp C    &kp R &kp L &kp LSHIFT
+   &to STENO &kp SEMI     &kp COMMA  &kp DOT &kp P &kp Y          &kp F   &kp G &kp C    &kp R &kp L &kp LSHIFT
    &kp ESC   &hm LCTRL A  &hm LALT O &lt 3 E &kp U &kp I          &kp D   &kp H &kp T    &kp N &kp S &kp MINUS
    &kp CAPS  &hm LALT SQT &kp Q      &kp J   &kp K &kp X          &kp B   &kp M &kp W    &kp V &kp Z &sk LSHIFT
                                        &mo 4   &lt 1 RET   &mt LGUI TAB   &kp TAB &lt 2 SPACE &kp RALT
@@ -57,14 +64,14 @@
                 raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  &  |  ?  |  !   |  $   |  %  |   |  `  |  #  |  *  |  /  |  \  | BKSP |
+// | BASE |  &  |  ?  |  !   |  $   |  %  |   |  `  |  #  |  *  |  /  |  \  | BKSP |
 // | CTRL |  {  |  [  |  :   |  (   |  =  |   |  ~  |  )  |  +  |  ]  |  }  |  -   |
 // | SHFT |  "  | DEL | BKSP | BKSP |     |   |  _  |  @  |  ^  |  _  | "|" |  ~   |
 //                    | GUI  |      | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &kp AMPS       &kp QMARK      &kp EXCL  &kp DLLR       &kp PRCNT   &kp GRAVE &kp HASH  &kp KP_MULTIPLY &kp FSLH  &kp BSLH &kp BSPC
-   &kp LCTRL &hm LCTRL LBRC &hm LALT LBKT  &kp COLON &hm LSHFT LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS        &kp RBKT  &kp RBRC &kp MINUS
-   &kp LSHFT &hm LALT DQT   &kp DELETE     &kp BSPC  &kp BSPC       &trans      &kp UNDER &kp AT    &kp CARET       &kp UNDER &kp PIPE &kp TILDE
+   &to DEFAULT &kp AMPS       &kp QMARK      &kp EXCL  &kp DLLR       &kp PRCNT   &kp GRAVE &kp HASH  &kp KP_MULTIPLY &kp FSLH  &kp BSLH &kp BSPC
+   &kp LCTRL   &hm LCTRL LBRC &hm LALT LBKT  &kp COLON &hm LSHFT LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS        &kp RBKT  &kp RBRC &kp MINUS
+   &kp LSHFT   &hm LALT DQT   &kp DELETE     &kp BSPC  &kp BSPC       &trans      &kp UNDER &kp AT    &kp CARET       &kp UNDER &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
@@ -72,14 +79,14 @@
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  &  |  ,  |  .  |  $  |  %  |   |  `  |  #  |  *  |  /  |  \  | BKSP |
+// | BASE |  &  |  ,  |  .  |  $  |  %  |   |  `  |  #  |  *  |  /  |  \  | BKSP |
 // | BTCLR|  7  |  5  |  3  |  1  |  9  |   |  8  |  0  |  2  |  4  |  6  |      |
 // | SHFT |  "  |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB   &kp AMPS     &kp COMMA  &kp DOT  &kp DLLR &kp PRCNT   &kp GRAVE &kp HASH  &kp KP_MULTIPLY &kp FSLH  &kp BSLH &kp BSPC
-   &bt BT_CLR &kp N7       &kp N5     &kp N3   &kp N1   &kp N9      &kp N8    &kp N0    &kp N2          &kp N4    &kp N6   &trans
-   &kp LSHFT  &hm LALT DQT &kp DELETE &kp BSPC &kp BSPC &trans      &kp UNDER &kp AT    &kp CARET       &kp UNDER &kp PIPE &kp TILDE
+   &to DEFAULT &kp AMPS     &kp COMMA  &kp DOT  &kp DLLR &kp PRCNT   &kp GRAVE &kp HASH  &kp KP_MULTIPLY &kp FSLH  &kp BSLH &kp BSPC
+   &bt BT_CLR  &kp N7       &kp N5     &kp N3   &kp N1   &kp N9      &kp N8    &kp N0    &kp N2          &kp N4    &kp N6   &trans
+   &kp LSHFT   &hm LALT DQT &kp DELETE &kp BSPC &kp BSPC &trans      &kp UNDER &kp AT    &kp CARET       &kp UNDER &kp PIPE &kp TILDE
                           	  &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
@@ -87,14 +94,14 @@
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  | LFT | RGT |  9  |  0  | BKSP |
+// | BASE |  1  |  2  |  3  |  4  |  5  |   |  6  | LFT | RGT |  9  |  0  | BKSP |
 // | BTCLR| CTL | ALT |     | SFT |     |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT | BT3 | BT2 | BT1 |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &trans    &trans   &trans   &trans    &trans      &kp N6   &kp LEFT &kp RIGHT &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &kp LCTRL &kp LALT &trans   &kp LSHFT &trans      &kp LEFT &kp DOWN &kp UP    &kp RIGHT &trans &trans
-   &kp LSHFT  &kp LALT  &trans   &trans   &trans    &trans      &trans   &trans   &trans    &trans    &trans &trans
+   &to DEFAULT &trans    &trans   &trans   &trans    &trans      &kp N6   &kp LEFT &kp RIGHT &kp N9    &kp N0 &kp BSPC
+   &bt BT_CLR  &kp LCTRL &kp LALT &trans   &kp LSHFT &trans      &kp LEFT &kp DOWN &kp UP    &kp RIGHT &trans &trans
+   &kp LSHFT   &kp LALT  &trans   &trans   &trans    &trans      &trans   &trans   &trans    &trans    &trans &trans
                           	     &kp LGUI &trans    &kp LGUI    &kp RET  &trans   &kp RALT
                         >;
                 };
@@ -102,15 +109,30 @@
                 fun_layer {
                         label = "FUNC";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | BASE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT3 | BT2 | BT1 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT | BT3 | BT2 | BT1 |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &to DEFAULT &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &kp LSHFT  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                        >;
+                };
+
+                steno_layer {
+                        label = "STENO";
+// -----------------------------------------------------------------------------------------
+// | BASE |  1  |  2  |  3  |  4  |  5  |   |  6  | LFT | RGT |  9  |  0  | BKSP |
+// | BTCLR|  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  [   |
+// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
+//                    |     |  C  |  V  |   |  N  |  M  |     |
+                        bindings = <
+   &to DEFAULT &trans &trans  &trans  &trans &trans     &kp N6  &trans &trans &trans &trans &kp BSPC
+   &bt BT_CLR  &kp Q  &kp W   &kp E   &kp R  &kp T      &kp Y   &kp U  &kp I  &kp O  &kp P  &kp LBRC
+   &kp LSHFT   &kp A  &kp S   &kp D   &kp F  &kp G      &kp H   &kp J  &kp K  &kp L  &SEMI  &kp SQT
+                          	  &trans  &kp C  &kp V      &kp N   &kp M  &trans
                         >;
                 };
         };
