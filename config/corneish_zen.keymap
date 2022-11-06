@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <220>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -36,7 +36,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <220>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -54,9 +54,9 @@
 // | CAPS |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | SHFT*|
 //                    | FUN | ENT | TAB |   | TAB | SPC  | ALT |
                         bindings = <
-   &to STENO &kp SEMI     &kp COMMA  &kp DOT &kp P &kp Y          &kp F   &kp G &kp C    &kp R &kp L &kp LSHIFT
-   &kp ESC   &hm LCTRL A  &hm LALT O &lt 3 E &kp U &kp I          &kp D   &kp H &kp T    &kp N &kp S &kp MINUS
-   &kp CAPS  &hm LALT SQT &kp Q      &kp J   &kp K &kp X          &kp B   &kp M &kp W    &kp V &kp Z &sk LSHIFT
+   &to STENO &kp SEMI     &kp COMMA  &kp DOT &kp P       &kp Y          &kp F   &kp G &kp C &kp R &kp L &kp LSHIFT
+   &kp ESC   &hm LCTRL A  &hm LALT O &lt 3 E &hm LSHFT U &kp I          &kp D   &hm LSHFT H &kp T    &kp N &kp S &kp MINUS
+   &kp CAPS  &hm LALT SQT &kp Q      &kp J   &kp K       &kp X          &kp B   &kp M       &kp W    &kp V &kp Z &sk LSHIFT
                                        &mo 4   &lt 1 RET   &mt LGUI TAB   &kp TAB &lt 2 SPACE &kp RALT
                         >;
                 };
