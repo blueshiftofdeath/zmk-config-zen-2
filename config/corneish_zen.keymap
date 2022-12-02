@@ -109,14 +109,14 @@
                 fun_layer {
                         label = "FUNC";
 // -----------------------------------------------------------------------------------------
-// | BASE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT3 | BT2 | BT1 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT | BT3 | BT2 | BT1 |     |     |   |     | BT1 | BT2 | BT3 | BT4 | BT5 |
+// | BASE |  1  |  2  |  3  |  4  |  5  |   | BR+ | PRV | NXT | PLY |  0  | PSCRN |
+// | BTCLR| BT3 | BT2 | BT1 | BT4 | BT5 |   | BR- | V-  | V+  | MUT |     |       |
+// | SHFT | BT3 | BT2 | BT1 |     |     |   |     | BT1 | BT2 | BT3 | BT4 | BT5   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &to DEFAULT &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7       &kp N8       &kp N9       &kp N0       &kp BSPC
-   &bt BT_CLR  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN     &kp UP       &kp RIGHT    &trans       &trans
-   &kp LSHFT   &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans       &trans         &trans   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+   &to DEFAULT &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp C_BRI_UP &kp C_PREV   &kp C_NEXT   &kp C_PP     &kp N0       &kp PSCRN
+   &bt BT_CLR  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4   &kp C_BRI_DN &kp C_VOL_DV &kp C_VOL_UP &kp C_MUTE   &trans       &trans
+   &kp LSHFT   &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans       &trans         &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
