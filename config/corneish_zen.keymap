@@ -115,7 +115,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &to DEFAULT &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp C_BRI_UP &kp C_PREV   &kp C_NEXT   &kp C_PP     &kp N0       &kp PSCRN
-   &bt BT_CLR  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4   &kp C_BRI_DN &kp C_VOL_DV &kp C_VOL_UP &kp C_MUTE   &trans       &trans
+   &bt BT_CLR  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4   &kp C_BRI_DN &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE   &trans       &trans
    &kp LSHFT   &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans       &trans         &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
