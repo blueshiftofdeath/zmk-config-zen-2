@@ -19,6 +19,29 @@
 };
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
@@ -31,7 +54,7 @@
 //                    | CMD | LWR | SPC |   | ENT | RSE | ALT |
                         bindings = <
    &kp ESC    &kp SEMI &kp COMMA  &kp DOT  &kp P &kp Y          &kp F   &kp G &kp C    &kp R &kp L &kp BSPC
-   &kp TAB    &kp A    &kp O      &kp E    &kp U &kp I          &kp D   &kp H &kp T    &kp N &kp S &ht_tp LCTRL MINUS
+   &kp TAB    &kp A    &kp O      &kp E    &kp U &kp I          &kp D   &kp H &kp T    &kp N &kp S &hm LCTRL MINUS
    &kp LSHIFT &kp SQT  &kp Q      &kp J    &kp K &kp X          &kp B   &kp M &kp W    &kp V &kp Z &kp LSHIFT
                                   &kp LGUI &mo 1 &kp SPACE      &kp RET &mo 2 &kp RALT
                         >;
