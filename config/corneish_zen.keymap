@@ -40,8 +40,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-
-/ {
         keymap {
                 compatible = "zmk,keymap";
 
