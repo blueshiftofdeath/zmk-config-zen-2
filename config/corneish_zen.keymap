@@ -54,7 +54,7 @@
    &kp ESC    &kp SEMI &kp COMMA  &kp DOT  &kp P     &kp Y          &kp F     &kp G     &kp C    &kp R &kp L &kp BSPC
    &kp TAB    &kp A    &kp O      &kp E    &kp U     &kp I          &kp D     &kp H     &kp T    &kp N &kp S &hm LCTRL MINUS
    &kp LSHIFT &kp SQT  &kp Q      &kp J    &kp K     &kp X          &kp B     &kp M     &kp W    &kp V &kp Z &kp LSHIFT
-                                  &kp LGUI &mo NUM_L &kp RET        &kp SPACE &mo SYM_R &kp RALT
+                                  &kp LGUI &to NUM_L &kp RET        &kp SPACE &to SYM_R &kp RALT
                         >;
                 };
                 
@@ -69,7 +69,7 @@
    &trans    &kp AMPS &kp COMMA  &kp DOT  &kp DLLR  &kp PRCNT   &kp GRAVE &kp HASH  &kp STAR  &kp FSLH  &kp BSLH &kp BSPC
    &trans    &kp N7   &kp N5     &kp N3   &kp N1    &kp N9      &kp N8    &kp N0    &kp N2    &kp N4    &kp N6   &trans
    &kp CAPS  &kp DQT  &kp DELETE &kp LEFT &kp RIGHT &trans      &kp UNDER &kp DOWN  &kp UP    &kp UNDER &kp PIPE &kp TILDE
-                      	         &kp LGUI &mo BT_LL &trans      &trans    &mo BASE  &kp RALT
+                      	         &kp LGUI &to BT_LL &trans      &trans    &to BASE  &kp RALT
                         >;
                 };
 
@@ -84,7 +84,7 @@
    &trans    &kp AMPS &kp QMARK  &kp EXCL  &kp DLLR &kp PRCNT   &kp GRAVE &kp HASH  &kp STAR  &kp FSLH  &kp BSLH &kp BSPC
    &kp LCTRL &kp LBRC &kp LBKT   &kp COLON &kp LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS  &kp RBKT  &kp RBRC &kp MINUS
    &kp LSHFT &kp DQT  &kp DELETE &kp BSPC  &kp BSPC &trans      &kp UNDER &kp AT    &kp CARET &kp UNDER &kp PIPE &kp TILDE
-                    	         &kp LGUI  &mo BASE &trans      &trans    &mo SYM_R &kp RALT
+                    	         &kp LGUI  &to BASE &trans      &trans    &to SYM_R &kp RALT
                         >;
                 };
                 
@@ -99,7 +99,7 @@
    &bt BT_CLR &kp AMPS &kp COMMA  &kp DOT      &kp DLLR     &kp PRCNT   &kp GRAVE &kp HASH     &kp STAR     &kp FSLH  &kp BSLH &kp BSPC
    &bt BT_CLR &kp N7   &kp N5     &bt BT_SEL 3 &bt BT_SEL 1 &kp N9      &kp N8    &bt BT_SEL 0 &bt BT_SEL 2 &kp N4    &kp N6   &trans
    &kp LSHFT  &kp DQT  &kp DELETE &kp BSPC     &kp BSPC     &trans      &kp UNDER &kp AT       &kp CARET    &kp UNDER &kp PIPE &kp TILDE
-                          	      &kp LGUI     &mo BT_LL    &trans      &trans    &mo NUM_L    &kp RALT
+                          	      &kp LGUI     &to BT_LL    &trans      &trans    &to NUM_L    &kp RALT
                         >;
                 };
 
