@@ -1,4 +1,4 @@
-#include <behaviors.dtsi>
+xyde <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
@@ -65,12 +65,12 @@
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // | STNO |  &  |  ?  |  !   |  $   |  %  |   |  `  |  #  |  *  |  /  |  \  | BKSP |
-// | CTRL |  {  |  [  |  :   |  (   |  =  |   |  ~  |  )  |  +  |  ]  |  }  |  -   |
+// | CTRL |  {  |  [  |  -   |  (   |  =  |   |  ~  |  )  |  +  |  ]  |  }  |  -   |
 // | SHFT |  "  | DEL | BKSP | BKSP |     |   |  _  |  @  |  ^  |  _  | "|" |  ~   |
 //                    | GUI  |      | SPC |   | ENT |     | ALT |
                         bindings = <
    &to STENO   &kp AMPS       &kp QMARK      &kp EXCL  &kp DLLR       &kp PRCNT   &kp GRAVE &kp HASH  &kp STAR &kp FSLH  &kp BSLH &kp BSPC
-   &kp LCTRL   &hm LCTRL LBRC &hm LALT LBKT  &kp COLON &hm LSHFT LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS        &kp RBKT  &kp RBRC &kp MINUS
+   &kp LCTRL   &hm LCTRL LBRC &hm LALT LBKT  &kp MINUS &hm LSHFT LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS        &kp RBKT  &kp RBRC &kp MINUS
    &kp LSHFT   &hm LALT DQT   &kp DELETE     &kp BSPC  &kp BSPC       &trans      &kp UNDER &kp AT    &kp CARET       &kp UNDER &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
