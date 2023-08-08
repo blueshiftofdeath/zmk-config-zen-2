@@ -65,13 +65,13 @@
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // | STNO |  &  |  ?  |  !   |  $   |  %  |   |  `  |  #  |  *  |  /  |  \  | BKSP |
-// | CTRL |  {  |  [  |  -   |  (   |  =  |   |  ~  |  )  |  +  |  ]  |  }  |  -   |
-// | SHFT |  "  | DEL | BKSP | BKSP |     |   |  _  |  @  |  ^  |  _  | "|" |  ~   |
+// | CTRL |  {  |  [  |  :   |  (   |  =  |   |  ~  |  )  |  +  |  ]  |  }  |  -   |
+// | SHFT |  "  | DEL |  -  | BKSP |     |   |  _  |  @  |  ^  |  _  | "|" |  ~   |
 //                    | GUI  |      | SPC |   | ENT |     | ALT |
                         bindings = <
    &to STENO   &kp AMPS       &kp QMARK      &kp EXCL  &kp DLLR       &kp PRCNT   &kp GRAVE &kp HASH  &kp STAR &kp FSLH  &kp BSLH &kp BSPC
-   &kp LCTRL   &hm LCTRL LBRC &hm LALT LBKT  &kp MINUS &hm LSHFT LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS        &kp RBKT  &kp RBRC &kp MINUS
-   &kp LSHFT   &hm LALT DQT   &kp DELETE     &kp BSPC  &kp BSPC       &trans      &kp UNDER &kp AT    &kp CARET       &kp UNDER &kp PIPE &kp TILDE
+   &kp LCTRL   &hm LCTRL LBRC &hm LALT LBKT  &kp COLON &hm LSHFT LPAR &kp EQUAL   &kp TILDE &kp RPAR  &kp PLUS        &kp RBKT  &kp RBRC &kp MINUS
+   &kp LSHFT   &hm LALT DQT   &kp DELETE     &kp MINUS  &kp BSPC       &trans      &kp UNDER &kp AT    &kp CARET       &kp UNDER &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
