@@ -32,7 +32,7 @@
                 , <&macro_release &kp LGUI>
                 , <&macro_tap &kp P &kp L &kp O &kp V &kp E &kp R &kp RET>
                 , <&macro_press &kp LGUI>
-                , <&macro_tap &kp DOT>
+                , <&macro_tap &kp DOT &kp TAB>
                 , <&macro_release &kp LGUI>
                 , <&macro_tap &to STENO>
                 ;
@@ -45,9 +45,9 @@
                 = <&macro_press &kp LGUI>
                 , <&macro_tap &kp SPACE>
                 , <&macro_release &kp LGUI>
-                , <&macro_tap &kp P>
+                , <&macro_tap &kp P &kp L &kp O &kp V &kp E &kp R &kp RET>
                 , <&macro_press &kp LGUI>
-                , <&macro_tap &kp DOT>
+                , <&macro_tap &kp DOT &kp TAB>
                 , <&macro_release &kp LGUI>
                 , <&macro_tap &to DEFAULT>
                 ;
