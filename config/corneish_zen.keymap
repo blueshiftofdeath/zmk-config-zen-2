@@ -21,6 +21,19 @@
 };
 
 / {
+    macros {
+        to_steno: to_steno {
+            label = "TO_STENO";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+};
+
+/ {
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
