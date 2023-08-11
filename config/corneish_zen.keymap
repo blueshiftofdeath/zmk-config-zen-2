@@ -161,14 +161,14 @@
                 steno_layer {
                         label = "STENO";
 // -----------------------------------------------------------------------------------------
-// | BASE |  1  |  2  |  3  |  4  |  5  |   |  6  | LFT | RGT |  9  |  0  | BKSP |
+// | BASE |  T  |  T  |  T  |  T  |  T  |   |  T  |  T  |  T  |  T  |  T  |  T |
 // |  T   |  Q  |  W  |  E  |  R  |  T  |   |  U  |  I  |  O  |  P  |  [  |  Y
 // |  G   |  A  |  S  |  D  |  F  |  G  |   |  J  |  K  |  L  |  ;  |  '  |  H
 //                    |     |  C  |  V  |   |  N  |  M  |     |
                         bindings = <
-   &from_steno &trans &trans  &trans  &trans &trans     &kp N6  &trans &trans &trans &trans   &kp BSPC
-   &kp T       &kp Q  &kp W   &kp E   &kp R  &kp T      &kp U  &kp I  &kp O  &kp P    &kp LBKT &kp Y
-   &kp G       &kp A  &kp S   &kp D   &kp F  &kp G      &kp J  &kp K  &kp L  &kp SEMI &kp SQT &kp H
+   &from_steno &kp T  &kp T  &kp T  &kp T  &kp T     &kp T  &kp T  &kp T  &kp T  &kp T    &kp T
+   &kp T       &kp Q  &kp W  &kp E  &kp R  &kp T     &kp U  &kp I  &kp O  &kp P  &kp LBKT &kp Y
+   &kp G       &kp A  &kp S  &kp D  &kp F  &kp G     &kp J  &kp K  &kp L  &kp SEMI &kp SQT &kp H
                           	  &trans  &kp C  &kp V      &kp N   &kp M  &trans
                         >;
                 };
