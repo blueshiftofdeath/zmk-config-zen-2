@@ -55,10 +55,10 @@
 // | CAPS |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | SHFT*|
 //                    | FUN | ENT | TAB |   | TAB | SPC  | ALT |
                         bindings = <
-   &trans    &kp SEMI     &kp COMMA  &kp DOT &kp P       &kp Y          &kp F   &kp G &kp C &kp R &kp L &kp LSHIFT
-   &kp ESC   &hm LCTRL A  &hm LALT O &lt 3 E &hm LSHFT U &kp I          &kp D   &hm LSHFT H &kp T    &kp N &kp S &kp MINUS
-   &kp CAPS  &hm LALT SQT &kp Q      &kp J   &kp K       &kp X          &kp B   &kp M       &kp W    &kp V &kp Z &sk LSHIFT
-                                   &mo 4   &lt 1 RET   &mt LGUI TAB   &lt 5 TAB &lt 2 SPACE &kp RALT
+   &trans    &kp SEMI     &kp COMMA  &kp DOT &kp P       &kp Y          &kp F     &kp G       &kp C    &kp R &kp L &kp LSHIFT
+   &kp ESC   &hm LCTRL A  &hm LALT O &lt 3 E &hm LSHFT U &kp I          &kp D     &hm LSHFT H &kp T    &kp N &kp S &kp MINUS
+   &kp CAPS  &hm LALT SQT &kp Q      &kp J   &kp K       &kp X          &kp B     &kp M       &kp W    &kp V &kp Z &sk LSHIFT
+                                     &mo 4   &lt 1 RET   &mt LGUI TAB   &lt 6 TAB &lt 2 SPACE &kp RALT
                         >;
                 };
 
@@ -131,9 +131,9 @@
 // |      |     |     |     |     | BASE |      |     |     |     |      |     |  
 //                    |     | SPC |  1   |      |     |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans    &trans    &trans &trans &trans &trans &to CLEAR &trans
-   &trans &kp N1 &kp N2 &kp N3 &kp N4    &trans    &trans &trans &trans &trans &kp ESC   &trans
-   &trans &trans &trans &trans &trans    &to 1     &trans &trans &trans &trans &trans    &trans
+   &trans &trans &trans &trans &trans    &trans    &trans &trans &trans &trans &trans  &trans
+   &trans &kp N1 &kp N2 &kp N3 &kp N4    &trans    &trans &trans &trans &trans &kp ESC &trans
+   &trans &trans &trans &trans &trans    &to 1     &trans &trans &trans &trans &trans  &trans
                      	&trans &kp SPACE &kp N1    &trans &trans &trans
                         >;
                 };
@@ -146,10 +146,10 @@
 // |      |     |     |     |     |     |      |     |     |     |      |     |  
 //                    |     |     |     |      |     |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-                     	&trans &trans &trans    &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &to ANKI &trans
+   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &kp ESC  &trans
+   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans   &trans
+                     	&trans &trans &kp N1    &trans &trans &trans
                         >;
                 };
         };
