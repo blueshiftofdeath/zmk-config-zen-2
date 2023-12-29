@@ -122,7 +122,7 @@
                         >;
                 };
 
-                fun_two_layer {
+                anki_layer {
                         label = "ANKI";
 // -----------------------------------------------------------------------------------------
 // | BASE |     |     |     |     |      |      |     |     |     | LOCK |     |  
@@ -130,10 +130,10 @@
 // |      |     |     |     |     | BASE |      |     |     |     |      |     |  
 //                    |     | SPC |  1   |      |     |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &to FUN2 &trans
-   &trans &kp N1 &kp N2 &kp N3 &kp N4 &trans    &trans &trans &trans &trans &kp ESC  &trans
-   &trans &trans &trans &trans &trans &to 1     &trans &trans &trans &trans &trans   &trans
-                     	&trans &trans &kp N1    &trans &trans &trans
+   &trans &trans &trans &trans &trans    &trans    &trans &trans &trans &trans &to ANKI &trans
+   &trans &kp N1 &kp N2 &kp N3 &kp N4    &trans    &trans &trans &trans &trans &kp ESC  &trans
+   &trans &trans &trans &trans &trans    &to 1     &trans &trans &trans &trans &trans   &trans
+                     	&trans &kp SPACE &kp N1    &trans &trans &trans
                         >;
                 };
         };
