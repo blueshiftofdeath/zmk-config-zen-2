@@ -65,7 +65,7 @@
                 raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// | STNO |  &  |  ?  |  !   |  $   |  %  |   |  `  |  #  |  ~  |  /  |  \  | BKSP |
+// |      |  &  |  ?  |  !   |  $   |  %  |   |  `  |  #  |  ~  |  /  |  \  | BKSP |
 // | CTRL |  {  |  [  |  :   |  (   |  =  |   |  *  |  )  |  +  |  ]  |  }  |  -   |
 // | SHFT |  "  | DEL |  -   | BKSP | ESC |   | CAPS|  @  |  ^  |  _  | "|" |  ~   |
 //                    | GUI  |      | SPC |   | ENT |     | ALT |
@@ -80,14 +80,14 @@
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// | BASE |  &  |  ,  |  .  |  $  |  %  |   |  `  |  #  |  *  |  /  |  \  | BKSP |
-// | BTCLR|  7  |  5  |  3  |  1  |  9  |   |  8  |  0  |  2  |  4  |  6  |      |
-// | SHFT |  "  |     |  -  |     | ESC |   |  :  |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | BASE |  &  |  ,  |  .  |  $  |  %   |   |  `  |  #  |  *  |  /  |  \  | BKSP |
+// | BTCLR|  7  |  5  |  3  |  1  |  9   |   |  8  |  0  |  2  |  4  |  6  |      |
+// | SHFT |  "  |     |  -  |     | BASE |   |  :  |     |     |     |     |      |
+//                    | GUI |     | SPC  |   | ENT |     | ALT |
                         bindings = <
    &to DEFAULT &kp AMPS     &kp COMMA  &kp DOT   &kp DLLR &kp PRCNT   &kp GRAVE &kp HASH &kp TILDE &kp FSLH  &kp BSLH &trans
    &bt BT_CLR  &kp N7       &kp N5     &kp N3    &kp N1   &kp N9      &kp N8    &kp N0   &kp N2    &kp N4    &kp N6   &trans
-   &kp LSHFT   &hm LALT DQT &kp DELETE &kp MINUS &kp BSPC &kp ESC     &kp COLON &kp AT   &kp CARET &kp UNDER &kp PIPE &trans
+   &kp LSHFT   &hm LALT DQT &kp DELETE &kp MINUS &kp BSPC &to 1       &kp COLON &kp AT   &kp CARET &kp UNDER &kp PIPE &trans
                           	           &kp LGUI  &trans   &kp SPACE   &kp RET   &trans &kp RALT
                         >;
                 };
@@ -95,14 +95,14 @@
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// | BASE |  1  |  2  |  3  |  4  |  5  |   |  6  | LFT | RGT |  9  |  0  | BKSP |
-// | BTCLR| CTL | ALT |     | SFT |     |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT | BT3 | BT2 | BT1 |     | ESC |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | BASE |  1  |  2  |  3  |  4  |  5   |   |  6  | LFT | RGT |  9  |  0  | BKSP |
+// | BTCLR| CTL | ALT |     | SFT |      |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT | BT3 | BT2 | BT1 |     | BASE |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC  |   | ENT |     | ALT |
                         bindings = <
    &to DEFAULT &trans    &trans   &trans   &trans    &trans      &kp N6   &kp LEFT &kp RIGHT &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR  &kp LCTRL &kp LALT &trans   &kp LSHFT &trans      &kp LEFT &kp DOWN &kp UP    &kp RIGHT &trans &trans
-   &kp LSHFT   &kp LALT  &trans   &trans   &trans    &trans      &trans   &trans   &trans    &trans    &trans &trans
+   &kp LSHFT   &kp LALT  &trans   &trans   &trans    &to 1       &trans   &trans   &trans    &trans    &trans &trans
 
                           	     &kp LGUI &trans    &kp LGUI    &kp RET  &trans   &kp RALT
                         >;
@@ -111,14 +111,14 @@
                 fun_layer {
                         label = "FUN";
 // -----------------------------------------------------------------------------------------
-// | BASE |  1  |  2  |  3  |  4  |  5  |   | BR+ | PRV | NXT | PLY |  0  | PSCRN |
-// | BTCLR| BT3 | BT2 | BT1 | BT4 | BT5 |   | BR- | V-  | V+  | MUT |     |       |
-// | SHFT | BT3 | BT2 | BT1 |     | ESC |   |     | BT1 | BT2 | BT3 | BT4 | BT5   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | BASE |  1  |  2  |  3  |  4  |  5   |   | BR+ | PRV | NXT | PLY |  0  | PSCRN |
+// | BTCLR| BT3 | BT2 | BT1 | BT4 | BT5  |   | BR- | V-  | V+  | MUT |     |       |
+// | SHFT | BT3 | BT2 | BT1 |     | BASE |   |     | BT1 | BT2 | BT3 | BT4 | BT5   |
+//                    | GUI |     | SPC  |   | ENT |     | ALT |
                         bindings = <
-   &to DEFAULT &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp C_BRI_UP &kp C_PREV   &kp C_NEXT   &kp C_PP     &kp N0       &kp PSCRN
-   &bt BT_CLR  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4   &kp C_BRI_DN &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE   &trans       &trans
-   &kp LSHFT   &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans       &trans         &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+   &to 1     &kp N1       &kp N2       &kp N3       &kp N4       &kp N5        &kp C_BRI_UP &kp C_PREV   &kp C_NEXT   &kp C_PP     &kp N0       &kp PSCRN
+   &bt BT_CLR &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4  &kp C_BRI_DN &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE   &trans       &trans
+   &kp LSHFT  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans       &trans        &to 1 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
@@ -126,30 +126,30 @@
                 anki_layer {
                         label = "ANKI";
 // -----------------------------------------------------------------------------------------
-// | BASE |     |     |     |     |      |      |     |     |     | LOCK |     |  
-// |      |  1  |  2  |  3  |  4  |      |      |     |     |     |  ESC |     |  
-// |      |     |     |     |     | BASE |      |     |     |     |      |     |  
-//                    |     | SPC |  1   |      |     |     |     |
+// |     |     |     |     |     |      |      |     |     |     |     |     |  
+// |     |  1  |  2  |  3  |  4  |      |      |     |     |     |     |     |  
+// |     |     |     |     |     | BASE |      |     |     |     |     |     |  
+//                   |     | SPC |  1   |      |     |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans    &trans    &trans &trans &trans &trans &trans  &trans
-   &trans &kp N1 &kp N2 &kp N3 &kp N4    &trans    &trans &trans &trans &trans &kp ESC &trans
-   &trans &trans &trans &trans &trans    &to 1     &trans &trans &trans &trans &trans  &trans
-                     	&trans &kp SPACE &kp N1    &trans &trans &trans
+   &none &none  &none  &none  &none     &none         &none  &none  &none  &none  &none   &none 
+   &none &kp N1 &kp N2 &kp N3 &kp N4    &none         &none  &none  &none  &none  &none   &none 
+   &none &none  &none  &none  &none     &to DEFAULT   &none  &none  &none  &none  &none   &none 
+                       &none  &kp SPACE &kp N1        &none  &none  &none 
                         >;
                 };
 
                 clear_layer {
                         label = "CLEAR";
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |      |     |     |     |      |     |  
-// |      |     |     |     |     |     |      |     |     |     |      |     |  
-// |      |     |     |     |     |     |      |     |     |     |      |     |  
-//                    |     |     |     |      |     |     |     |
+// |      |     |     |     |     |      |      |     |     |     | ANKI |     |  
+// |      |     |     |     |     |      |      |     |     |     | ESC  |     |  
+// |      |     |     |     |     | BASE |      |     |     |     |      |     |  
+//                    |     |     |      |      |     |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &to ANKI &trans
-   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &kp ESC  &trans
-   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans   &trans
-                     	&trans &trans &kp N1    &trans &trans &trans
+   &none  &none  &none  &none  &none  &none     &none  &none  &none  &none  &to ANKI &none 
+   &none  &none  &none  &none  &none  &none     &none  &none  &none  &none  &kp ESC  &none 
+   &none  &none  &none  &none  &none  &none     &none  &none  &none  &none  &none    &none 
+                     	&none  &none  &kp N1    &none  &none  &none 
                         >;
                 };
         };
