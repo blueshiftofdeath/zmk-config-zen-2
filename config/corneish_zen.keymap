@@ -8,6 +8,7 @@
 #define NAV     3
 #define FUN     4
 #define ANKI    5
+#define CLEAR   6
 
 / {
   chosen {
@@ -130,10 +131,25 @@
 // |      |     |     |     |     | BASE |      |     |     |     |      |     |  
 //                    |     | SPC |  1   |      |     |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans    &trans    &trans &trans &trans &trans &to ANKI &trans
-   &trans &kp N1 &kp N2 &kp N3 &kp N4    &trans    &trans &trans &trans &trans &kp ESC  &trans
-   &trans &trans &trans &trans &trans    &to 1     &trans &trans &trans &trans &trans   &trans
+   &trans &trans &trans &trans &trans    &trans    &trans &trans &trans &trans &to CLEAR &trans
+   &trans &kp N1 &kp N2 &kp N3 &kp N4    &trans    &trans &trans &trans &trans &kp ESC   &trans
+   &trans &trans &trans &trans &trans    &to 1     &trans &trans &trans &trans &trans    &trans
                      	&trans &kp SPACE &kp N1    &trans &trans &trans
+                        >;
+                };
+
+                anki_layer {
+                        label = "CLEAR";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |      |     |     |     |      |     |  
+// |      |     |     |     |     |     |      |     |     |     |      |     |  
+// |      |     |     |     |     |     |      |     |     |     |      |     |  
+//                    |     |     |     |      |     |     |     |
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+                     	&trans &trans &trans    &trans &trans &trans
                         >;
                 };
         };
