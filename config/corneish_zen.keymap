@@ -22,6 +22,31 @@
 };
 
 / {
+    macros {
+        undo: undo {
+            label = "UNDO";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp Z>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        flag: flag {
+            label = "FLAG";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+    };
+};
+
+/ {
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -112,12 +137,12 @@
                         label = "FUN";
 // -----------------------------------------------------------------------------------------
 // | BASE |  1  |  2  |  3  |  4  |  5   |   | BR+ | PRV | NXT | PLY |  0  | PSCRN |
-// | BTCLR| BT3 | BT2 | BT1 | BT4 | BT5  |   | BR- | V-  | V+  | MUT |     |       |
+// | BTCLR| BT3 | BT2 | BT1 | BT4 | BT5  |   | BR- | V-  | V+  | MUT |     | BTCLR |
 // | SHFT | BT3 | BT2 | BT1 |     | BASE |   |     | BT1 | BT2 | BT3 | BT4 | BT5   |
 //                    | GUI |     | SPC  |   | ENT |     | ALT |
                         bindings = <
    &to DEFAULT &kp N1       &kp N2       &kp N3       &kp N4       &kp N5        &kp C_BRI_UP &kp C_PREV   &kp C_NEXT   &kp C_PP     &kp N0       &kp PSCRN
-   &bt BT_CLR  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4  &kp C_BRI_DN &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE   &trans       &trans
+   &bt BT_CLR  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4  &kp C_BRI_DN &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE   &trans       &bt BT_CLR
    &kp LSHFT   &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans       &trans        &to DEFAULT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
@@ -126,14 +151,14 @@
                 anki_layer {
                         label = "ANKI";
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |      |      |     |     |     |     |     |  
+// |     | UNDO| FLAG|  E  |  R  |      |      |     |     |     |     |     |  
 // |     |  1  |  2  |  3  |  4  |      |      |     |     |     |     |     |  
-// |     |     |     |     |     | BASE |      |     |     |     |     |     |  
+// |     |     |  !  |     |     | BASE |      |     |     |     |     |     |  
 //                   |     | SPC |  1   |      |     |     |     |
                         bindings = <
-   &none &none  &none  &none  &none     &none         &none  &none  &none  &none  &none   &none 
-   &none &kp N1 &kp N2 &kp N3 &kp N4    &none         &none  &none  &none  &none  &none   &none 
-   &none &none  &none  &none  &none     &to DEFAULT   &none  &none  &none  &none  &none   &none 
+   &none &undo  &flag    &kp E  &kp R     &none         &none  &none  &none  &none  &none   &none 
+   &none &kp N1 &kp N2   &kp N3 &kp N4    &none         &none  &none  &none  &none  &none   &none 
+   &none &none  &kp EXCL &none  &none     &to DEFAULT   &none  &none  &none  &none  &none   &none 
                        &none  &kp SPACE &kp N1        &none  &none  &none 
                         >;
                 };
@@ -141,15 +166,15 @@
                 clear_layer {
                         label = "CLEAR";
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |      |      |     |     |     | ANKI |     |  
-// |      |     |     |     |     |      |      |     |     |     | ESC  |     |  
-// |      |     |     |     |     | BASE |      |     |     |     |      |     |  
+// |      |     |     |     |     |      |      |     |     |     |     | ANKI |  
+// |      |     |     |     |     |      |      |     | CAP |     |     | ESC  |  
+// |      |     |     |     |     | BASE |      |     |     |     |     |      |  
 //                    |     |     |      |      |     |     |     |
                         bindings = <
-   &none  &none  &none  &none  &none  &none     &none  &none  &none  &none  &to ANKI &none 
-   &none  &none  &none  &none  &none  &none     &none  &none  &none  &none  &kp ESC  &none 
-   &none  &none  &none  &none  &none  &none     &none  &none  &none  &none  &none    &none 
-                     	&none  &none  &kp N1    &none  &none  &none 
+   &none  &none  &none  &none  &none  &none     &none  &none    &none  &none  &to ANKI &none 
+   &none  &none  &none  &none  &none  &none     &none  &kp CAPS &none  &none  &kp ESC  &none 
+   &none  &none  &none  &none  &none  &none     &none  &none    &none  &none  &none    &none 
+                     	&none  &none  &kp N1    &none  &none    &none 
                         >;
                 };
         };
