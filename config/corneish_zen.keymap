@@ -7,9 +7,6 @@
 #define NUM     2
 #define NAV     3
 #define FUN     4
-#define ANKI    5
-#define NUMPAD  6
-#define CLEAR   7
 
 / {
     chosen {
@@ -146,51 +143,6 @@
    &bt BT_CLR  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 3 &bt BT_SEL 4  &kp C_BRI_DN &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE   &trans       &bt BT_CLR
    &kp LSHFT   &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans       &trans        &to DEFAULT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
-
-                anki_layer {
-                        label = "ANKI";
-// -----------------------------------------------------------------------------------------
-// |     | UNDO| FLAG|  E  |  R  |      |      |     |     |     |     |     |  
-// |     |  1  |  2  |  3  |  4  |      |      |     |     |     |     |     |  
-// |     |     |  !  |     |     | BASE |      |     |     |     |     |     |  
-//                   |     | SPC |  1   |      |     |     |     |
-                        bindings = <
-   &none &undo  &flag    &kp E  &kp R     &none         &none  &none  &none  &none  &none   &none 
-   &none &kp N1 &kp N2   &kp N3 &kp N4    &none         &none  &none  &none  &none  &none   &none 
-   &none &none  &kp EXCL &none  &none     &to DEFAULT   &none  &none  &none  &none  &none   &none 
-                       &none  &kp SPACE &kp N1        &none  &none  &none 
-                        >;
-                };
-
-                numpad_layer {
-                        label = "NUMPAD";
-// -----------------------------------------------------------------------------------------
-// |     | UNDO| FLAG|  E  |  R  |      |      |     |     |     |     |     |  
-// |     |  1  |  2  |  3  |  4  |      |      |     |     |     |     |     |  
-// |     |     |  !  |     |     | BASE |      |     |     |     |     |     |  
-//                   |     | SPC |  1   |      |     |     |     |
-                        bindings = <
-   &kp UP   &kp RET   &kp N9 &kp N8 &kp N7 &kp LEFT      &none  &none  &none  &none  &none   &none 
-   &kp DOWN &kp COLON &kp N6 &kp N5 &kp N4 &kp RIGHT     &none  &none  &none  &none  &none   &none 
-   &none    &kp MINUS &kp N3 &kp N2 &kp N1 &to DEFAULT   &none  &none  &none  &none  &none   &none 
-                             &none  &kp N0 &kp TAB       &none  &none  &none 
-                        >;
-                };
-
-                clear_layer {
-                        label = "CLEAR";
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |      |      |     |     |     | NPAD| ANKI |  
-// |      |     |     |     |     |      |      |     | CAP |     |     | ESC  |  
-// |      |     |     |     |     | BASE |      |     |     |     |     |      |  
-//                    |     |     |      |      |     |     |     |
-                        bindings = <
-   &none  &none  &none  &none  &none  &none     &none  &none    &none  &to NUMPAD  &to ANKI &none 
-   &none  &none  &none  &none  &none  &none     &none  &kp CAPS &none  &none       &kp ESC  &none 
-   &none  &none  &none  &none  &none  &none     &none  &none    &none  &none       &none    &none 
-                     	&none  &none  &kp N1    &none  &none    &none 
                         >;
                 };
         };
