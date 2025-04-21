@@ -84,7 +84,7 @@
    &trans    &kp SEMI     &kp COMMA  &kp DOT &kp P       &kp Y          &kp F     &kp G       &kp C    &kp R &kp L &kp LSHIFT
    &kp ESC   &hm LCTRL A  &hm LALT O &lt 3 E &hm LSHFT U &kp I          &kp D     &hm LSHFT H &kp T    &kp N &kp S &kp MINUS
    &kp CAPS  &hm LALT SQT &kp Q      &kp J   &kp K       &kp X          &kp B     &kp M       &kp W    &kp V &kp Z &sk LSHIFT
-                                     &mo 4   &lt 1 RET   &mt LGUI TAB   &lt 7 TAB &lt 2 SPACE &kp RALT
+                                     &mo 4   &lt 1 RET   &mt LGUI TAB   &mt LALT TAB &lt 2 SPACE &kp RALT
                         >;
                 };
 
@@ -94,12 +94,12 @@
 // |      |  &  |  ?  |  !   |  $   |  %  |   |  `  |  #  |  ~  |  /  |  \  | BKSP |
 // | CTRL |  {  |  [  |  :   |  (   |  =  |   |  *  |  )  |  +  |  ]  |  }  |  -   |
 // | SHFT |  "  | DEL |  -   | BKSP | ESC |   | CAPS|  @  |  ^  |  _  | "|" |  ~   |
-//                    | GUI  |      | SPC |   | ENT |     | ALT |
+//                    | GUI  |      |     |   |     |     | ALT |
                         bindings = <
    &trans    &kp AMPS       &kp QMARK     &kp EXCL  &kp DLLR       &kp PRCNT    &kp GRAVE &kp HASH &kp TILDE &kp FSLH  &kp BSLH &kp BSPC
    &kp LCTRL &hm LCTRL LBRC &hm LALT LBKT &kp COLON &hm LSHFT LPAR &kp EQUAL    &kp STAR  &kp RPAR &kp PLUS  &kp RBKT  &kp RBRC &kp MINUS
    &kp LSHFT &hm LALT DQT   &kp DELETE    &kp MINUS &kp BSPC       &kp ESC      &kp CAPS  &kp AT   &kp CARET &kp UNDER &kp PIPE &kp TILDE
-                    	    &kp LGUI      &trans    &kp SPACE      &kp RET      &trans    &kp RALT
+                    	      &kp LGUI      &trans    &trans         &trans       &trans    &kp RALT
                         >;
                 };
                 
